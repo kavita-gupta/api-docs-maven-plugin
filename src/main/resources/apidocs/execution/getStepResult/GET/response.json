@@ -1,0 +1,10 @@
+{
+   "id": 2,
+   "comment": "comment-1",
+   "status": "1",
+   "testStepId": 1,
+   "releaseTestScheduleId": 2,
+   "cyclePhaseId": 2,
+   "executionDate": 1410425125000,
+   "attachmentCount": 0
+}

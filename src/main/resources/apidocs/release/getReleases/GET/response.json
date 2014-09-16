@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Release 1.0",
+    "description": "Default release",
+    "startDate": 1388514600000,
+    "endDate": null,
+    "createdDate": 1388590339000,
+    "modifiedDate": null,
+    "status": "0",
+    "remoteProjectData": {
+      "remoteData": {
+        "id": 1,
+        "name": "Sample Project"
+      }
+    },
+    "externalSystem": "Blackberry (BBX)"
+  },
+  {
+    "id": 2,
+    "name": "Release 1.0",
+    "description": null,
+    "startDate": 1388514600000,
+    "endDate": null,
+    "createdDate": 1388590776000,
+    "modifiedDate": null,
+    "status": "0",
+    "remoteProjectData": {
+      "remoteData": {
+        "id": 2,
+        "name": "Blackberry (BBX)"
+      }
+    },
+    "externalSystem": null
+  }
+]

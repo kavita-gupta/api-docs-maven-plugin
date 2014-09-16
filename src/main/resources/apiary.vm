@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: http://localhost:80/services/rest/latest
+
+# Zephyr Enterprise REST API
+Zephyr Enterprise REST API allows to access test assets.
+
+#foreach( $resource in $resources )
+# Group $resource.name
+$resource.groupNotes
+
+#foreach( $operation in $resource.operations )
+$DOUBLE_HASH $operation.name [$operation.path]
+$TRIPLE_HASH $operation.description [$operation.requestType]
+#if ($operation.queryParams) 
++ Parameters
+#foreach( $queryParam in $operation.queryParams )
+    + $queryParam.name ($queryParam.type) ... $queryParam.description
+#end
+
+#end
+
+#if ($operation.jsonRequest) 
++ Request ($operation.consumes)
+
+#foreach( $jsonRequestSingleLine in $operation.jsonRequest )
+        $jsonRequestSingleLine
+#end
+
+#end
+## end of if operation.jsonRequest
+#if ($operation.jsonResponse)
++ Response $operation.responseCode ($operation.produces)
+
+#foreach( $jsonResponseSingleLine in $operation.jsonResponse )
+        $jsonResponseSingleLine
+#end
+
+#end
+## end of ifoperation.jsonResponse
+
+#end
+## end of operation
+
+#end
+## end of resource

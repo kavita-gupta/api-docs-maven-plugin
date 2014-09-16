@@ -1,0 +1,25 @@
+{
+   "filter":    {
+      "filterTitle": "search Request Name",
+      "filterDescription": "search Request Desc",
+      "filterUrl": "TBP",
+      "empty": false
+   },
+   "columns":    [
+            {
+         "label": "Blackberry (BBX)",
+         "data": {"Test Manager": "13"}
+      },
+            {
+         "label": "Sample Project",
+         "data": {"Test Manager": "2"}
+      }
+   ],
+   "details": {},
+   "yHeading": "Created By",
+   "totalRows": 1,
+   "totalColumns": 2,
+   "showTotals": true,
+   "yheading": "Created By",
+   "xheading": "Project"
+}

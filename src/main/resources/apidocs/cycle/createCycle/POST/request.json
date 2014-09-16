@@ -1,0 +1,20 @@
+{
+   "name": "Cycle with TCR phase",
+   "build": "7993",
+   "environment": "MyOwnEnv",
+   "startDate": 1406658600000,
+   "endDate": 1419877800000,
+   "status": 0,
+   "releaseId": 2,
+   "remotePhases": [   {
+      "id": 8,
+      "remoteRepository": {"remoteData":       {
+         "id": 4,
+         "name": "P1"
+      }},
+      "startDate": 1406658600000,
+      "endDate": 1419877800000,
+      "freeForm": false,
+      "remoteCycle": null
+   }]
+}

@@ -1,0 +1,27 @@
+{"requirement": {"stats": [
+      {
+      "value": "Priority",
+      "label": "Priority",
+      "key": "requirement.priorityId"
+   },
+      {
+      "value": "Creator",
+      "label": "Creator",
+      "key": "requirement.creatorId"
+   },
+      {
+      "value": "Release",
+      "label": "Release",
+      "key": "requirement.releaseId"
+   },
+      {
+      "value": "Project",
+      "label": "Project",
+      "key": "requirement.projectId"
+   },
+      {
+      "value": "Review status",
+      "label": "Review status",
+      "key": "requirement.zcf_1002"
+   }
+]}}

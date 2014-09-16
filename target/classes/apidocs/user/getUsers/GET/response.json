@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "title": "Manager",
+    "username": "test.manager",
+    "firstName": "Test",
+    "lastName": "Manager",
+    "address1": "",
+    "address2": null,
+    "city": "Sunnyvale",
+    "state": "CA",
+    "country": "US",
+    "picture": null,
+    "postalCode": "",
+    "location": "Sunnyvale",
+    "type": "1",
+    "email": "test.manager@yourcompany.com",
+    "workPhoneNumber": "+1-408-555-1212",
+    "mobilePhoneNumber": null,
+    "homePhoneNumber": null,
+    "website": "http://www.thedinc.com",
+    "accountEnabled": true,
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "loginName": "test.manager",
+    "roles": [
+      {
+        "id": 1,
+        "name": "manager",
+        "description": "Manager (Default role, cannot be modified)"
+      }
+    ],
+    "userType": 0,
+    "chargeableFlag": true
+  },
+  {
+    "id": 2,
+    "title": "Lead",
+    "username": "test.lead",
+    "firstName": "Test",
+    "lastName": "Lead",
+    "address1": "",
+    "address2": null,
+    "city": "Sunnyvale",
+    "state": "CA",
+    "country": "US",
+    "picture": null,
+    "postalCode": "",
+    "location": "Sunnyvale",
+    "type": "1",
+    "email": "test.lead@yourcompany.com",
+    "workPhoneNumber": "+1-408-555-1212",
+    "mobilePhoneNumber": null,
+    "homePhoneNumber": null,
+    "website": "http://www.thedinc.com",
+    "accountEnabled": true,
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "loginName": "test.lead",
+    "roles": [
+      {
+        "id": 2,
+        "name": "lead",
+        "description": "Test Lead (Default role, cannot be modified)"
+      }
+    ],
+    "userType": 0,
+    "chargeableFlag": true
+  },
+  {
+    "id": 3,
+    "title": "Tester",
+    "username": "tester.one",
+    "firstName": "Tester",
+    "lastName": "One",
+    "address1": "",
+    "address2": null,
+    "city": "Bangalore",
+    "state": "",
+    "country": "India",
+    "picture": null,
+    "postalCode": "",
+    "location": "Bangalore",
+    "type": "1",
+    "email": "tester.one@yourcompany.com",
+    "workPhoneNumber": "+91-80-5551212",
+    "mobilePhoneNumber": null,
+    "homePhoneNumber": null,
+    "website": "",
+    "accountEnabled": true,
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "loginName": "tester.one",
+    "roles": [
+      {
+        "id": 3,
+        "name": "tester",
+        "description": "Tester (Default role, cannot be modified)"
+      }
+    ],
+    "userType": 0,
+    "chargeableFlag": true
+  },
+  {
+    "id": 4,
+    "title": "Developer",
+    "username": "dev.one",
+    "firstName": "Dev",
+    "lastName": "One",
+    "address1": "",
+    "address2": null,
+    "city": "",
+    "state": "",
+    "country": "",
+    "picture": null,
+    "postalCode": "",
+    "location": "",
+    "type": "1",
+    "email": "dev.one@yourcompany.com",
+    "workPhoneNumber": "+",
+    "mobilePhoneNumber": null,
+    "homePhoneNumber": null,
+    "website": "",
+    "accountEnabled": true,
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "loginName": "dev.one",
+    "roles": [
+      {
+        "id": 4,
+        "name": "defectuser",
+        "description": "Defect User (Default role, cannot be modified)"
+      }
+    ],
+    "userType": 1,
+    "chargeableFlag": false
+  }
+]

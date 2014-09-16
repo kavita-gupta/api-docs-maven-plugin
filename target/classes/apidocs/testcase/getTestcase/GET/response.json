@@ -1,0 +1,33 @@
+{
+  "id": 1,
+  "remoteRepositoryId": 1,
+  "testcase": {
+    "id": 3,
+    "name": "Kontrollo ndërfaqen kryesore mund të adaptohen automatikisht paraqitjen e rezolutave të ndryshme dhe shfletues",
+    "description": null,
+    "priority": null,
+    "tag": null,
+    "lastModifiedOn": null,
+    "creationDate": 1388514600000,
+    "comments": null,
+    "estimatedTime": 600,
+    "userId": 1,
+    "externalId": "ALBANIA.100.000.001",
+    "defects": null,
+    "automated": false,
+    "scriptId": null,
+    "scriptName": null,
+    "scriptPath": null,
+    "releaseId": null,
+    "oldId": null,
+    "requirements": [
+      
+    ],
+    "attachmentCount": 0,
+    "customProperties": {
+      
+    }
+  },
+  "original": true,
+  "testSteps": "<steps maxId=\"1\"><step id=\"1\" orderId=\"1\" detail=\"Përdorni Firefox 3 .* 4 .* Në 1024 * 768 rezolutë për të hapur të lojës\" data=\"&apos;1 për të përmbushur shtrirjen dhe madhësinë e ekranit kryesore saktë\" result=\"\" /></steps>"
+}

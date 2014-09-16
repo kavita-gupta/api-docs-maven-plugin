@@ -1,0 +1,28 @@
+[{
+   "firstResult": 0,
+   "resultSize": 1,
+   "pageNumber": 0,
+   "results": [   {
+      "id": 802,
+      "requirementId": null,
+      "requirementTreeId": 4,
+      "name": "requirement_1",
+      "priority": "1",
+      "url": null,
+      "details": "requirement details",
+      "externalId": "101",
+      "releaseIds": [2],
+      "createdBy": 1,
+      "lastModifiedBy": 1,
+      "createdOn": 1400697000000,
+      "lastModifiedOn": 1400783400000,
+      "testcaseIds": [],
+      "attachmentCount": 1,
+      "requirementType": 0,
+      "customProperties":       {
+         "zcf_1002": 1,
+         "zcf_1001": "1. soapUI installed 2.. SoapUI project \"ZEE-RESTService-soapui-project.xml\" imported to soapUI - Documents (ZEE-RESTService-soapui-project.zip)"
+      }
+   }],
+   "type": "requirement"
+}]

@@ -1,0 +1,37 @@
+{
+   "testScheduleId": 2,
+   "assignmentDate": 1410114600000,
+   "estimatedTime": 600,
+   "comment": "updated note",
+   "testerId": 3,
+   "remoteRepositoryTestcaseId": 28,
+   "remoteTestcaseId": 24,
+   "cyclePhaseId": 2,
+   "lastTestResult":    {
+      "id": 11,
+      "executionDate": 1410173279000,
+      "executionNotes": null,
+      "executionStatus": "2",
+      "attachmentLocation": null,
+      "status": null,
+      "defect": null,
+      "testerId": 2,
+      "releaseTestScheduleId": 2
+   },
+   "attachmentCount": 0,
+   "scriptName": null,
+   "scriptId": null,
+   "scriptPath": null,
+   "remoteFieldValues": null,
+   "actualTime": 600,
+   "defects": [   {
+      "defectId": 14530,
+      "description": "User Profile Payload Elements",
+      "createdDate": 1341945000000,
+      "defectStatus": null,
+      "priority": "Critical",
+      "severity": null
+   }],
+   "testStepResult": null,
+   "resultHistory": null
+}

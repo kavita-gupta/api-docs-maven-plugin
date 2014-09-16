@@ -1,0 +1,10 @@
+Resource Path:http://localhost/flex/services/rest/latest/cycle/{id}/cyclePhase?bulkassign=0
+{
+"remoteRepository": {"remoteData": {
+"id":56,
+"name": "rest bug test"
+ }},
+ "startDate": 1406658600000,
+ "endDate": 1419877800000
+         
+}

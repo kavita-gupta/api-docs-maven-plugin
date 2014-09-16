@@ -1,0 +1,58 @@
+[
+      {
+      "testScheduleId": 19,
+      "assignmentDate": 1410287400000,
+      "estimatedTime": 600,
+      "comment": null,
+      "testerId": -10,
+      "remoteRepositoryTestcaseId": 65,
+      "remoteTestcaseId": 33,
+      "cyclePhaseId": 16,
+      "lastTestResult":       {
+         "id": 21,
+         "executionDate": 1410421564000,
+         "executionNotes": null,
+         "executionStatus": "1",
+         "attachmentLocation": null,
+         "status": null,
+         "defect": null,
+         "testerId": 1,
+         "releaseTestScheduleId": 19
+      },
+      "attachmentCount": 0,
+      "scriptName": null,
+      "scriptId": null,
+      "scriptPath": null,
+      "remoteFieldValues": null,
+      "actualTime": 600,
+      "defects": null
+   },
+      {
+      "testScheduleId": 23,
+      "assignmentDate": 1410287400000,
+      "estimatedTime": 600,
+      "comment": null,
+      "testerId": -10,
+      "remoteRepositoryTestcaseId": 68,
+      "remoteTestcaseId": 34,
+      "cyclePhaseId": 18,
+      "lastTestResult":       {
+         "id": 22,
+         "executionDate": 1410421571000,
+         "executionNotes": null,
+         "executionStatus": "1",
+         "attachmentLocation": null,
+         "status": null,
+         "defect": null,
+         "testerId": 1,
+         "releaseTestScheduleId": 23
+      },
+      "attachmentCount": 0,
+      "scriptName": null,
+      "scriptId": null,
+      "scriptPath": null,
+      "remoteFieldValues": null,
+      "actualTime": 600,
+      "defects": null
+   }
+]

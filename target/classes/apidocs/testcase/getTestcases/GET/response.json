@@ -1,0 +1,78 @@
+[
+  {
+    "id": 24,
+    "remoteRepositoryId": 4,
+    "testcase": {
+      "id": 24,
+      "name": "testcase_1 in p1",
+      "description": "",
+      "priority": "P3",
+      "tag": "rest",
+      "lastModifiedOn": null,
+      "creationDate": 1400697000000,
+      "comments": "",
+      "estimatedTime": 600,
+      "userId": 1,
+      "externalId": "301",
+      "defects": [
+        {
+          "defectId": 14530,
+          "description": "User Profile Payload Elements",
+          "createdDate": 1341945000000,
+          "defectStatus": null,
+          "priority": "Critical",
+          "severity": null
+        }
+      ],
+      "automated": false,
+      "scriptId": null,
+      "scriptName": null,
+      "scriptPath": null,
+      "releaseId": 2,
+      "oldId": 0,
+      "requirements": [
+        
+      ],
+      "attachmentCount": 1,
+      "customProperties": {
+        "zcf_1003": 2,
+        "zcf_1004": true
+      }
+    },
+    "original": true,
+    "testSteps": "<steps maxId=\"5\"><step id=\"1\" orderId=\"1\" detail=\"step_1 in p1 \" data=\"data_1 in p1 \" result=\"res_1 in p1 \" /><step id=\"2\" orderId=\"2\" detail=\"step_2 in p1 \" data=\"data_2 in p1 \" result=\"res_2 in p1 \" /><step id=\"3\" orderId=\"3\" detail=\"step_3 in tc1 \" data=\"data_3 in tc1 \" result=\"res_3 in tc1 \" /><step id=\"4\" orderId=\"4\" detail=\"step_4 in tc1 \" data=\"data_4 in tc1 \" result=\"res_4 in tc1 \" /><step id=\"5\" orderId=\"5\" detail=\" step_5 in tc1\" data=\"data_5 in tc1 \" result=\"res_5 in tc1 \" /></steps>"
+  },
+  {
+    "id": 27,
+    "remoteRepositoryId": 5,
+    "testcase": {
+      "id": 27,
+      "name": "testcase_2 in p2",
+      "description": "",
+      "priority": "P3",
+      "tag": "rest",
+      "lastModifiedOn": null,
+      "creationDate": 1400697000000,
+      "comments": null,
+      "estimatedTime": 600,
+      "userId": 1,
+      "externalId": "304",
+      "defects": null,
+      "automated": true,
+      "scriptId": "4321",
+      "scriptName": "auto2",
+      "scriptPath": "C:users/script/autoscript2",
+      "releaseId": 2,
+      "oldId": 0,
+      "requirements": [
+        
+      ],
+      "attachmentCount": 1,
+      "customProperties": {
+        "zcf_1003": 1
+      }
+    },
+    "original": true,
+    "testSteps": "<steps maxId=\"5\"><step id=\"1\" orderId=\"1\" detail=\"step_1 in tc4\" data=\"data_1 in tc4 \" result=\"res_1 in tc4\r \" /><step id=\"2\" orderId=\"2\" detail=\"step_2 in tc4\" data=\"data_2 in tc4 \" result=\"res_2 in tc4 \" /><step id=\"3\" orderId=\"3\" detail=\" step_3 in tc4\" data=\"data_3 in tc4 \" result=\"res_3 in tc4 \" /><step id=\"4\" orderId=\"4\" detail=\"step_4 in tc4 \" data=\"data_4 in tc4 \" result=\"res_4 in tc4 \" /><step id=\"5\" orderId=\"5\" detail=\"step_5 in tc4 \" data=\"data_5 in tc4 \" result=\"res_5 in tc4 \" /></steps>"
+  }
+]

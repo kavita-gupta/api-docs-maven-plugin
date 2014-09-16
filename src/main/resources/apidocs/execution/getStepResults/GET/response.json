@@ -1,0 +1,52 @@
+[
+      {
+      "id": 2,
+      "comment": "comment-1",
+      "status": "1",
+      "testStepId": 1,
+      "releaseTestScheduleId": 2,
+      "cyclePhaseId": 2,
+      "executionDate": 1410425125000,
+      "attachmentCount": 0
+   },
+      {
+      "id": 3,
+      "comment": "comment-2",
+      "status": "2",
+      "testStepId": 2,
+      "releaseTestScheduleId": 2,
+      "cyclePhaseId": 2,
+      "executionDate": 1400828290000,
+      "attachmentCount": 0
+   },
+      {
+      "id": 4,
+      "comment": "comment-3",
+      "status": "3",
+      "testStepId": 3,
+      "releaseTestScheduleId": 2,
+      "cyclePhaseId": 2,
+      "executionDate": 1400828293000,
+      "attachmentCount": 0
+   },
+      {
+      "id": 5,
+      "comment": "comment-4",
+      "status": "4",
+      "testStepId": 4,
+      "releaseTestScheduleId": 2,
+      "cyclePhaseId": 2,
+      "executionDate": 1410174059000,
+      "attachmentCount": 0
+   },
+      {
+      "id": 6,
+      "comment": "comment-5",
+      "status": "4",
+      "testStepId": 5,
+      "releaseTestScheduleId": 2,
+      "cyclePhaseId": 2,
+      "executionDate": 1410174059000,
+      "attachmentCount": 0
+   }
+]

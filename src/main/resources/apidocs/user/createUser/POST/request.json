@@ -1,0 +1,24 @@
+{
+   "id": 3,
+   "title": "Tester",
+   "username": "steve.waugh",
+   "firstName": "Steve",
+   "lastName": "Waugh",
+   "city": "Bangalore",
+   "country": "India",
+   "location": "Bangalore",
+   "type": "1",
+   "email": "steve.waugh@yourcompany.com",
+   "workPhoneNumber": "+91-80-5551212",
+   "accountEnabled": true,
+   "accountExpired": false,
+   "credentialsExpired": false,
+   "loginName": "steve.waugh",
+   "roles": [   {
+      "id": 3,
+      "name": "tester",
+      "description": "Tester (Default role, cannot be modified)"
+   }],
+   "userType": 0,
+   "chargeableFlag": true
+}

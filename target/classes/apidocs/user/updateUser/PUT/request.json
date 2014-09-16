@@ -1,0 +1,34 @@
+{
+  "id": 5,
+  "title": "Tester",
+  "username": "steve.waugh",
+  "firstName": "Steve",
+  "lastName": "Waugh",
+  "address1": null,
+  "address2": null,
+  "city": "Bangalore",
+  "state": null,
+  "country": "India",
+  "picture": null,
+  "postalCode": null,
+  "location": "Bangalore",
+  "type": "1",
+  "email": "steve.waugh@yourcompany.com",
+  "workPhoneNumber": "+91-80-5551212",
+  "mobilePhoneNumber": null,
+  "homePhoneNumber": null,
+  "website": null,
+  "accountEnabled": true,
+  "accountExpired": false,
+  "credentialsExpired": true,
+  "loginName": "steve.waugh",
+  "roles": [
+    {
+      "id": 2,
+      "name": "lead",
+      "description": "lead (Default role, cannot be modified)"
+    }
+  ],
+  "userType": 0,
+  "chargeableFlag": true
+}

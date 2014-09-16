@@ -1,0 +1,39 @@
+{
+  "id": 1,
+  "remoteDepartment": null,
+  "name": "Sample Project",
+  "description": "This is a sample project shipped with Zephyr. Please modify this one or create a new one for your projects.",
+  "startDate": 1388514600000,
+  "endDate": null,
+  "status": "2",
+  "showItem": true,
+  "newItem": true,
+  "externalSystem": null,
+  "members": [
+    {
+      "id": 3,
+      "userId": 3,
+      "firstName": "Tester",
+      "lastName": "One",
+      "username": "tester.one"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "firstName": "Test",
+      "lastName": "Manager",
+      "username": "test.manager"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "firstName": "Test",
+      "lastName": "Lead",
+      "username": "test.lead"
+    }
+  ],
+  "type": 0,
+  "accessToDashboardSecured": true,
+  "urlFragment": "sample-project-dashboard",
+  "accessLimitedOnlyToTeam": true
+}

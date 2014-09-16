@@ -1,0 +1,16 @@
+{
+  "id": "be7b9b77-4883-4b49-9a65-1fa435cbe342",
+  "name": "Zephyr Enterprise",
+  "typeId": "zephyr",
+  "version": "4.6",
+  "buildNumber": "8401",
+  "applinksVersion": "4.0.4",
+  "inboundAuthenticationTypes": [
+    "com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider"
+  ],
+  "outboundAuthenticationTypes": [
+    "com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider"
+  ],
+  "url": "http://localhost/flex",
+  "publicSignup": false
+}

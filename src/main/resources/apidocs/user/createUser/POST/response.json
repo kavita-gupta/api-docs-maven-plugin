@@ -1,0 +1,30 @@
+{
+  "id": 5,
+  "title": null,
+  "username": null,
+  "firstName": null,
+  "lastName": null,
+  "address1": null,
+  "address2": null,
+  "city": null,
+  "state": null,
+  "country": null,
+  "picture": null,
+  "postalCode": null,
+  "location": null,
+  "type": null,
+  "email": null,
+  "workPhoneNumber": null,
+  "mobilePhoneNumber": null,
+  "homePhoneNumber": null,
+  "website": null,
+  "accountEnabled": null,
+  "accountExpired": null,
+  "credentialsExpired": null,
+  "loginName": null,
+  "roles": [
+    
+  ],
+  "userType": null,
+  "chargeableFlag": null
+}

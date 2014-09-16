@@ -1,0 +1,11 @@
+Resource Path:http://localhost/flex/services/rest/latest/cycle/3
+{
+   "name": "Cycle without phase",
+   "build": "Build-updated",
+   "environment": "Env-updated",
+   "startDate": 1406658600000,
+   "endDate": 1419877800000,
+   "status": 0,
+   "releaseId": 2,
+   "remotePhases": []
+}
