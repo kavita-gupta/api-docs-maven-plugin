@@ -2,7 +2,7 @@
    "testScheduleId": 2,
    "assignmentDate": 1410114600000,
    "estimatedTime": 600,
-   "comment": "updated note",
+   "comment": "Execution notes",
    "testerId": 3,
    "remoteRepositoryTestcaseId": 28,
    "remoteTestcaseId": 24,
@@ -18,10 +18,10 @@
       "testerId": 2,
       "releaseTestScheduleId": 2
    },
-   "attachmentCount": 0,
-   "scriptName": null,
-   "scriptId": null,
-   "scriptPath": null,
+   "attachmentCount": 1,
+   "scriptName":"Automation Script name",
+   "scriptId":"Automation script id",
+   "scriptPath":"Automation script path",
    "remoteFieldValues": null,
    "actualTime": 600,
    "defects": [   {

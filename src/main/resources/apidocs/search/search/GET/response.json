@@ -16,7 +16,10 @@
       "lastModifiedBy": 1,
       "createdOn": 1400697000000,
       "lastModifiedOn": 1400783400000,
-      "testcaseIds": [],
+      "testcaseIds":[
+       3,
+       4
+       ],
       "attachmentCount": 1,
       "requirementType": 0,
       "customProperties":       {

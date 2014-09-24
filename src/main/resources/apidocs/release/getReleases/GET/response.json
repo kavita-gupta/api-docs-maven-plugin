@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Release 1.0",
     "description": "Default release",
-    "startDate": 1388514600000,
-    "endDate": null,
+    "startDate":1410373800000,
+    "endDate":1410719400000,
     "createdDate": 1388590339000,
     "modifiedDate": null,
     "status": "0",
@@ -20,17 +20,17 @@
     "id": 2,
     "name": "Release 1.0",
     "description": null,
-    "startDate": 1388514600000,
-    "endDate": null,
+    "startDate":1410373800000,
+    "endDate":1410719400000,
     "createdDate": 1388590776000,
     "modifiedDate": null,
     "status": "0",
     "remoteProjectData": {
       "remoteData": {
         "id": 2,
-        "name": "Blackberry (BBX)"
+        "name": "Project 2"
       }
     },
-    "externalSystem": null
+    "externalSystem": "Nokia Lumia"
   }
 ]

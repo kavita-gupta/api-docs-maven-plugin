@@ -1,6 +1,6 @@
 {
    "id": 2,
-   "comment": "comment-1",
+   "comment": "Test step comment",
    "status": "1",
    "testStepId": 1,
    "releaseTestScheduleId": 2,

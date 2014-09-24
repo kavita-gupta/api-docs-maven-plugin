@@ -1,0 +1,14 @@
+{
+"id":100,
+"creatorId":1,
+"name":"Cloning Release #10 'ReleaseToBeCloned - Copy'",
+"status":0,
+"startTime":1411381157930,
+"endTime":null,
+"totalSteps":12,
+"completedSteps":1,
+"stepMessage":"4 TestStep(s) serialized.",
+"message":"Cloning release ReleaseToBeCloned - Copy started.\n2 Repository phase(s) serialized.\n4 TestCase(s) serialized.\n4 TestStep(s) serialized.",
+"summaryMessage":null,
+"stepLabel":"entities processed"
+}

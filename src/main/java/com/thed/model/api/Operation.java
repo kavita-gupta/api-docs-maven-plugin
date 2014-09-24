@@ -4,6 +4,13 @@ import java.util.List;
 
 public class Operation {
 	private String name ;
+	private String summary ;
+	public String getSummary() {
+		return summary;
+	}
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
 	private String description ;
 	private String path ;
 	/** POST, GET, etc */
@@ -23,7 +30,7 @@ public class Operation {
 	/** e.g. 200 */
 	private String responseCode ;
 	
-	private List<QueryParameter> queryParams ;		
+	private List<QueryParameter> queryParams ;
 	
 	public String getName() {
 		return name;

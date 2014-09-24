@@ -4,12 +4,12 @@
     "remoteDepartment": null,
     "name": "Sample Project",
     "description": "This is a sample project shipped with Zephyr. Please modify this one or create a new one for your projects.",
-    "startDate": 1388514600000,
-    "endDate": null,
+    "startDate":1410373800000,
+    "endDate":1410719400000,
     "status": "2",
     "showItem": true,
     "newItem": true,
-    "externalSystem": null,
+    "externalSystem": "Nokia Lumia",
     "members": [
       {
         "id": 1,

@@ -23,6 +23,8 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.UriInfo;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.maven.plugin.AbstractMojo;
@@ -42,6 +44,8 @@ import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.springframework.stereotype.Service;
 
+import scala.Array;
+
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Ordering;
@@ -49,6 +53,7 @@ import com.thed.model.api.Operation;
 import com.thed.model.api.QueryParameter;
 import com.thed.model.api.Resource;
 import com.thed.model.api.Util;
+import com.thed.rpc.exception.ZephyrServiceException;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
@@ -77,8 +82,8 @@ public class ApiaryGeneratorMojo extends AbstractMojo {
     private String outputFileName="target/apiary.apib";
 
     public void execute() throws MojoExecutionException, MojoFailureException {
-    	Collection<Class> sortedTypes =null; //getResourceClasses();
-		try {
+    	Collection<Class<?>> sortedTypes =getResourceClasses();
+		/*try {
 			sortedTypes = new Util().getClasses(packageName);
 		} catch (ClassNotFoundException e1) {
 			// TODO Auto-generated catch block
@@ -87,7 +92,7 @@ public class ApiaryGeneratorMojo extends AbstractMojo {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}//getResourceClasses();
-        List<Resource> list = new ArrayList<Resource>();
+*/        List<Resource> list = new ArrayList<Resource>();
         for(Class type : sortedTypes){
             if(type.getName().startsWith(packageName) && type.isInterface()){
                 System.out.println(type);
@@ -171,53 +176,63 @@ public class ApiaryGeneratorMojo extends AbstractMojo {
 							@ApiError(code = 404, reason = "Testcase not found") })
 	*/
 	private void getOperationMetadata(Resource r, Method m) throws IOException {
-		Operation op = new Operation();
-		if (m.getAnnotation(GET.class) != null) {
-			op.setRequestType("GET");
-		} else if (m.getAnnotation(POST.class) != null) {
-			op.setRequestType("POST");
-		} else if (m.getAnnotation(PUT.class) != null) {
-			op.setRequestType("PUT");
-		} else if (m.getAnnotation(DELETE.class) != null) {
-			op.setRequestType("DELETE");
-		}
-
 		Path path = (Path) m.getAnnotation(Path.class);
-		op.setPath(supressDuplicateSlash(r.getPath() + "/" + path.value()));
+		if (path != null) {
+			Operation op = new Operation();
+			if (m.getAnnotation(GET.class) != null) {
+				op.setRequestType("GET");
+			} else if (m.getAnnotation(POST.class) != null) {
+				op.setRequestType("POST");
+			} else if (m.getAnnotation(PUT.class) != null) {
+				op.setRequestType("PUT");
+			} else if (m.getAnnotation(DELETE.class) != null) {
+				op.setRequestType("DELETE");
+			}			
+			op.setPath(supressDuplicateSlash(r.getPath() + "/" + path.value()));
 
-		ApiOperation api = (ApiOperation) m.getAnnotation(ApiOperation.class);
-		if (api != null) {
-			op.setName(api.value());
-			op.setDescription(api.value());	// don't have description, duplicating name value
-		} else {
-			op.setName("TODO: please add description");
-			op.setDescription("TODO: please add description");
-		}
+			ApiOperation api = (ApiOperation) m.getAnnotation(ApiOperation.class);
+			if (api != null) {
+				op.setName(api.value());
+				/*if (StringUtils.isNotBlank(api.notes())) {
+					op.setDescription(api.notes());
+				} else {*/
+				op.setSummary(api.value());	// don't have description, duplicating name value
+				//				}
+				if (StringUtils.isNotBlank(api.notes())) {
+					op.setDescription(api.notes());
+				} else {
+					op.setDescription("TODO: please add Notes");
+				}
 
-		// use Resource's annotation if required
-		if (m.getAnnotation(Produces.class) != null) {
-			Produces produces = (Produces) m.getAnnotation(Produces.class);
-			op.setProduces(StringUtils.join(produces.value(), " "));
-		} else {
-			op.setProduces(r.getProduces());
-		}
+			} else {
+				op.setName("TODO: please add description");
+				op.setDescription("TODO: please add description");
+			}
 
-		if (m.getAnnotation(Consumes.class) != null) {
-			Consumes consumes = (Consumes) m.getAnnotation(Consumes.class);
-			op.setConsumes(StringUtils.join(consumes.value(), " "));
-		} else {
-			op.setConsumes(r.getConsumes());
-		}
+			// use Resource's annotation if required
+			if (m.getAnnotation(Produces.class) != null) {
+				Produces produces = (Produces) m.getAnnotation(Produces.class);
+				op.setProduces(StringUtils.join(produces.value(), " "));
+			} else {
+				op.setProduces(r.getProduces());
+			}
 
-		if (r.getOperations() == null) {
-			r.setOperations(new ArrayList<Operation>());
-		}
-		r.getOperations().add(op);		
-		op.setJsonRequest(getRequestResponse(r,m,op,new String("request")));
-		op.setJsonResponse(getRequestResponse(r,m,op,new String("response")));
-		op.setResponseCode("200");
+			if (m.getAnnotation(Consumes.class) != null) {
+				Consumes consumes = (Consumes) m.getAnnotation(Consumes.class);
+				op.setConsumes(StringUtils.join(consumes.value(), " "));
+			} else {
+				op.setConsumes(r.getConsumes());
+			}
 
-		getUrlParameter(r, op, m);
+			if (r.getOperations() == null) {
+				r.setOperations(new ArrayList<Operation>());
+			}
+			r.getOperations().add(op);		
+			op.setJsonRequest(getRequestResponse(r,m,op,new String("request")));
+			op.setJsonResponse(getRequestResponse(r,m,op,new String("response")));
+			op.setResponseCode("200");
+			getUrlParameter(r, op, m);
+		}		
 	}
 
 	// Get the requst/response fronm a text file on a particular location src/main/resources/apidocs/<resource>/<method>/<request>/response.json e.g. src/main/resources/apidocs/attachment/getAttachment/GET/response.json
@@ -267,32 +282,121 @@ public class ApiaryGeneratorMojo extends AbstractMojo {
 				@CookieParam("token") Cookie tokenFromCookie) throws ZephyrServiceException;
 		*/
 		Class[] params = m.getParameterTypes() ;
+		
+		StringBuilder queryParamsPath = new StringBuilder();
 //		TypeVariable<Method>[] tvm = m.getTypeParameters();
 		for (int i = 0; i < pa.length; i++) {
 			Annotation[] eachParam = pa[i] ;
 			// ignore ApiParam or PathParam or CookieParam ignore
 			QueryParam qpAnnotation = hasQueryParam(eachParam) ;
+			
 			if (qpAnnotation != null) {
 
 				if (op.getQueryParams() == null) {
 					List<QueryParameter> queryParams = new ArrayList<QueryParameter>();
 					op.setQueryParams(queryParams);
+					
 				}
-				
+				System.out.println(qpAnnotation.value());
 				QueryParameter qParam = new QueryParameter();
 				qParam.setName(qpAnnotation.value());
 				qParam.setType(params[i].getSimpleName());
 				qParam.setDescription(getApiDescription(eachParam));
+				qParam.setIsRequired(getApiRequiredValue(eachParam));
+				queryParamsPath.append(qpAnnotation.value() + ",");
 				op.getQueryParams().add(qParam);
 			}
+			
+			
+			Context contextAnnotation = hasContextAnnotation(eachParam) ;
+			
+			if (contextAnnotation != null) {
+				List<String> names = new ArrayList<String>();
+				List<String> types = new ArrayList<String>();
+				List<String> descriptions = new ArrayList<String>();
+				String allowableValues = getApiAllowableValues(eachParam);
+				int lengthOfQP = parseAllowableValues(names, types, descriptions, allowableValues);
+				if (op.getQueryParams() == null) {
+					List<QueryParameter> queryParams = new ArrayList<QueryParameter>();
+					op.setQueryParams(queryParams);
+					
+				}
+				for (int j=0; j<lengthOfQP; j++) {
+					QueryParameter qParam = new QueryParameter();
+					qParam.setName(names.get(j));
+					qParam.setType(types.get(j));
+					qParam.setDescription(descriptions.get(j));
+					qParam.setIsRequired(getApiRequiredValue(eachParam));
+					queryParamsPath.append(names.get(j) + ",");
+					op.getQueryParams().add(qParam);
+				}
+				
+			}
+			
 		}
+		if (queryParamsPath.length()>0) {
+			if (op.getPath().endsWith("/")) {
+				int index = op.getPath().lastIndexOf("/");
+				op.setPath(op.getPath().substring(0,index));
+			}
+			String path = "{?" + queryParamsPath.deleteCharAt(queryParamsPath.lastIndexOf(","))+"}";
+			op.setPath(op.getPath() + path);
+		}
+		
 		
 	}
 	
+	public int parseAllowableValues(List names, List types, List descriptions, String allowableValues) {
+		String[] params = StringUtils.split(allowableValues, ",");
+		
+//		allowableValues = "id:number:Id of cycle, name:String: Name of cycle, build:String:Build of cycle, environment:String:Environment of cycle, startDate:Date:Start date of cycle, endDate:Date:End date of cycle, releaseId:Number:Release id of cycle"
+		for(String param : params) {
+			names.add(StringUtils.substringBefore(param, ":"));
+			types.add(StringUtils.substringBetween(param, ":", ":"));
+			descriptions.add(StringUtils.substringAfterLast(param, ":"));
+		}
+		return params.length;
+	}
+	
+	private String getApiValue(Annotation[] eachParam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private String getApiAllowableValues(Annotation[] paramAnnotaions) {
+		for (Annotation ax: paramAnnotaions) {
+			if (ax instanceof ApiParam) {
+				return ((ApiParam) ax).allowableValues();
+			}
+		}
+		return null ;
+	}
+	
+
+	private String getApiRequiredValue(Annotation[] paramAnnotaions) {
+		for (Annotation ax: paramAnnotaions) {
+			if (ax instanceof ApiParam) {
+				if (((ApiParam) ax).required()) {
+					return "required";
+				}
+			}
+		}
+		return "optional";
+	}
+
 	private QueryParam hasQueryParam(Annotation[] paramAnnotaions) {
 		for (Annotation ax: paramAnnotaions) {
 			if (ax instanceof QueryParam) {
 				return (QueryParam) ax ;
+			}
+		}
+		return null ;
+	}
+	
+	private Context hasContextAnnotation(Annotation[] paramAnnotaions) {
+		for (Annotation ax: paramAnnotaions) {
+			if (ax instanceof Context) {
+				return (Context) ax ;
 			}
 		}
 		return null ;
@@ -306,6 +410,7 @@ public class ApiaryGeneratorMojo extends AbstractMojo {
 		}
 		return "TODO: please provide a description" ;
 	}
+
 	
 	private String supressDuplicateSlash(String s) {
 		String rep = s.replaceAll("//", "/");

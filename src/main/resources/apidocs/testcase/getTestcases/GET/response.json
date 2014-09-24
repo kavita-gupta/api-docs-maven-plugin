@@ -5,12 +5,12 @@
     "testcase": {
       "id": 24,
       "name": "testcase_1 in p1",
-      "description": "",
+      "description": "testcase description",
       "priority": "P3",
       "tag": "rest",
       "lastModifiedOn": null,
       "creationDate": 1400697000000,
-      "comments": "",
+      "comments": "comment-3",
       "estimatedTime": 600,
       "userId": 1,
       "externalId": "301",
@@ -25,13 +25,13 @@
         }
       ],
       "automated": false,
-      "scriptId": null,
-      "scriptName": null,
-      "scriptPath": null,
+      "scriptId":"Automation script id",
+      "scriptName":"Automation Script name",
+      "scriptPath":"Automation script path",
       "releaseId": 2,
       "oldId": 0,
       "requirements": [
-        
+        1
       ],
       "attachmentCount": 1,
       "customProperties": {
@@ -48,12 +48,12 @@
     "testcase": {
       "id": 27,
       "name": "testcase_2 in p2",
-      "description": "",
+      "description": "Description-2",
       "priority": "P3",
       "tag": "rest",
       "lastModifiedOn": null,
       "creationDate": 1400697000000,
-      "comments": null,
+      "comments": "comment-2",
       "estimatedTime": 600,
       "userId": 1,
       "externalId": "304",

@@ -1,8 +1,8 @@
 {
 "id":1,
 "name":"c1",
-"build":null,
-"environment":null,
+"build":"7993",
+"environment":"env-1",
 "startDate":1410201000000,
 "endDate":1410719400000,
 "status":0,

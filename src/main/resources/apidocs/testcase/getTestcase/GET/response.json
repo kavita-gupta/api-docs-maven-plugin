@@ -4,28 +4,37 @@
   "testcase": {
     "id": 3,
     "name": "Kontrollo ndërfaqen kryesore mund të adaptohen automatikisht paraqitjen e rezolutave të ndryshme dhe shfletues",
-    "description": null,
-    "priority": null,
-    "tag": null,
+    "description": "This is description",
+    "priority": "P3",
+    "tag": "attending, attended, attend",
     "lastModifiedOn": null,
     "creationDate": 1388514600000,
-    "comments": null,
+    "comments": "comment-1",
     "estimatedTime": 600,
     "userId": 1,
     "externalId": "ALBANIA.100.000.001",
-    "defects": null,
-    "automated": false,
-    "scriptId": null,
-    "scriptName": null,
-    "scriptPath": null,
-    "releaseId": null,
-    "oldId": null,
-    "requirements": [
-      
+    "defects": [
+        {
+          "defectId": 14530,
+          "description": "User Profile Payload Elements",
+          "createdDate": 1341945000000,
+          "defectStatus": null,
+          "priority": "Critical",
+          "severity": null
+        }
     ],
-    "attachmentCount": 0,
-    "customProperties": {
-      
+    "automated": false,
+    "scriptId":"Automation script id",
+    "scriptName":"Automation Script name",
+    "scriptPath":"Automation script path",
+    "releaseId": 1,
+    "oldId": 0,
+    "requirements": [
+      1
+    ],
+    "attachmentCount": 1,
+    "customProperties":{
+        "zcf_1001":"text-1"
     }
   },
   "original": true,

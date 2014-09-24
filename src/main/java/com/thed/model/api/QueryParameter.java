@@ -4,6 +4,21 @@ public class QueryParameter {
 	private String name ;
 	private String type ;
 	private String description ;
+	private String isRequired;
+	private String urlName;
+	
+	public String getUrlName() {
+		return urlName;
+	}
+	public void setUrlName(String urlName) {
+		this.urlName = urlName;
+	}
+	public String getIsRequired() {
+		return isRequired;
+	}
+	public void setIsRequired(String isRequired) {
+		this.isRequired = isRequired;
+	}
 	public String getName() {
 		return name;
 	}

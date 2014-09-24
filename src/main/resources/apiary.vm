@@ -10,11 +10,12 @@ $resource.groupNotes
 
 #foreach( $operation in $resource.operations )
 $DOUBLE_HASH $operation.name [$operation.path]
-$TRIPLE_HASH $operation.description [$operation.requestType]
+$TRIPLE_HASH $operation.summary [$operation.requestType]
+$operation.description
 #if ($operation.queryParams) 
 + Parameters
 #foreach( $queryParam in $operation.queryParams )
-    + $queryParam.name ($queryParam.type) ... $queryParam.description
+    + $queryParam.name ($queryParam.isRequired, $queryParam.type) ... $queryParam.description
 #end
 
 #end
